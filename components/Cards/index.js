@@ -27,9 +27,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
         maker(javascript);
         maker(bootstrap);
         maker(technology);
-        maker(node)
-        
-        
+        maker(node)        
     })
     .catch((err)=>{
         console.log(err);
@@ -52,6 +50,7 @@ function makeCard(article){
     card.appendChild(author);
 
     let imgContainer = document.createElement('div');
+    imgContainer.classList.add("img-container");
     let img = document.createElement('img');
     img.src = article.authorPhoto;
     imgContainer.appendChild(img);
